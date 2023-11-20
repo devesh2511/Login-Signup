@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 
 * {
+    font-family: 'Red Hat Display', sans-serif;
     transition: all 0.3s ease-out;
 }
+
 
 .example-card {
     width: 17rem;

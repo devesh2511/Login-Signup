@@ -5,13 +5,21 @@ import { LoginComponent } from './shared/login/login.component';
 import { RegisterComponent } from './shared/register/register.component';
 import { BookServiceComponent } from './shared/book-service/book-service.component';
 import { AppointmentComponent } from './shared/appointment/appointment.component';
+import { AdminComponent } from './shared/admin/admin.component';
+import { Dialog1Component } from './shared/dialog1/dialog1.component';
+import { Dialog2Component } from './shared/dialog2/dialog2.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'book-service/:id', component: BookServiceComponent},
-  {path: 'appointment/:id', component: AppointmentComponent},
+  {path: 'appointment', component: AppointmentComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'dialog1', component:Dialog1Component},
+  {path: 'dialog2', component:Dialog2Component},
+
+
 ];
 
 @NgModule({

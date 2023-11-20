@@ -19,8 +19,7 @@ declare var Razorpay: any;
 export class BookServiceComponent implements OnInit {
   id: string = "";
   data: any;
-  ngZone: any;
-  constructor(private router: ActivatedRoute, private service: HomeService) { }
+  constructor(private router: ActivatedRoute, private service: HomeService, private routed: Router) { }
 
   ngOnInit(): void {
     this.router.paramMap.pipe(
@@ -41,6 +40,7 @@ export class BookServiceComponent implements OnInit {
 
   paymentGateway() {
     let sums = this.data.price;
+    let serviceId = this.data.serviceId;
     let options = {
       "key": "rzp_test_UHsR0lIAjZhxPI",
       "amount": sums * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -55,17 +55,17 @@ export class BookServiceComponent implements OnInit {
         } else {
           // payment successful
         }
-        alert("Payment successful! Thank You for Shopping with us!!");
-        
-        window.location.href = (`/appointment/${this.id}`);
+        alert("Payment successful! Please book an appointment!!");
 
+        // this.routed.navigateByUrl('/appointment');
         const thisuser = localStorage.getItem("username");
         console.log(thisuser);
-        const arg = { "BookingId": this.bookingId, "username": thisuser, "serviceName": this.data.serviceName, "PaymentId": response.razorpay_payment_id }
+        const arg = { "BookingId": this.bookingId, "username": thisuser, "serviceName": this.data.serviceName, "PaymentId": response.razorpay_payment_id, Price: this.data.price, "Category": this.data.category }
         console.log(arg);
         this.service.addBooking(arg).subscribe((data: any) => {
-          console.log(data);
+          console.log(this.data);
         });
+        this.routed.navigateByUrl('/appointment');
 
       },
       "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
@@ -80,7 +80,7 @@ export class BookServiceComponent implements OnInit {
         "color": "#000000"
       }
     };
-
+    this.routed.navigateByUrl('/appointment');
     Razorpay.open(options);
   }
 

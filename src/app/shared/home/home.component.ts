@@ -47,8 +47,8 @@ export class HomeComponent implements OnInit {
   doSorting(value: string) {
     let sortColumn: string = '';
     let sortType: string = '';
-    if (value.toLowerCase() === 'price-by-desc') {
-      this.displayedServices = this.CleaningServices.sort((a, b) => b.serviceId - a.serviceId)
+    if (value.toLowerCase() === 'default') {
+      this.displayedServices = this.CleaningServices.sort((a, b) => a.serviceId - b.serviceId)
 
     } else if (value.toLowerCase() === 'price-by-desc') {
       this.displayedServices = this.CleaningServices.sort((a, b) => b.price - a.price)

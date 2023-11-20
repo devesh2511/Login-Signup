@@ -4,59 +4,14 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 
-.service-page {
+.options{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    align-content: stretch;
-    margin: 2rem;
-    padding: 1rem;
-}
-
-img {
-    width: 25rem;
-    height: 21rem;
-    box-shadow: 0px 0px 10px 1px #00000069;
-    border-radius: 1rem;
-}
-
-.service-details {
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
-    align-content: space-around;
-}
-
-.title {
-    font-size: 2.5em;
-    text-transform: uppercase;
-    padding: 10px 0px;
-    font-weight: 700;
-    background: url(https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg);
-    background-size: 10%;
-    background-position: 50% 50%;
-    -webkit-background-clip: text;
-    color: rgba(0, 0, 0, 0.08);
-    animation: zoomout 1s ease 50ms forwards;
-}
-
-
-@keyframes zoomout {
-    from {
-        background-size: 100%;
-    }
-
-    to {
-        background-size: 10%;
-    }
-}
-
-.category{
-
+    align-content: center;
+    margin: 2rem;
+    padding: 2rem 0rem;
 }
 
 .btn-cart {
@@ -111,4 +66,62 @@ img {
     height: 100%;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.charts {
+    width: 100%;
+    margin: 5rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+iframe {
+    height: 30rem;
+}
+
+.service-page {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: stretch;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* .service-details {
+    width: 20rem; 
+} */
+
+.title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    font-weight: 700;
+    background: url(https://images.unsplash.com/photo-1482449609509-eae2a7ea42b7?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg);
+    background-size: 10%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    writing-mode: vertical-rl;
+    color: rgba(0, 0, 0, 0.08);
+    animation: zoomout 1s ease 50ms forwards;
+}
+
+
+@keyframes zoomout {
+    from {
+        background-size: 20%;
+    }
+
+    to {
+        background-size: 100%;
+    }
+}
+
+.service-chart {
+    width: 65vw;
+
 }

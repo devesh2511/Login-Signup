@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { TokenService } from '../../services/token.service';
@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username:['',Validators.required],
       password:['',Validators.required],
+      role:['',Validators.required]
     }) 
   }
 
@@ -34,7 +35,16 @@ export class LoginComponent implements OnInit {
       this.tokenService.storeAccessToken(res.accessToken)
       this.tokenService.storeRefrshToken(res.refreshToken)
       localStorage.setItem("username",formValue.username);
-      this.router.navigate(['/'])
+
+      if(formValue.role  == 'customer'){
+        this.router.navigate(['/'])
+      }
+
+      else if(formValue.role == 'admin'){
+        this.router.navigate(['/admin'])
+      }
+
+      // this.router.navigate(['/'])
     },error : ()=>{
       this.message='Wrong username or password!!'
     }})

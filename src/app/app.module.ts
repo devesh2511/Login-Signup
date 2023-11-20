@@ -21,6 +21,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { BookServiceComponent } from './shared/book-service/book-service.component';
 import { AppointmentComponent } from './shared/appointment/appointment.component';
 import { SharedModule } from './shared/shared.module';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -29,8 +30,9 @@ import { SharedModule } from './shared/shared.module';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
+    
     // NavComponent,
-    FooterComponent,
+    //FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,9 @@ import { SharedModule } from './shared/shared.module';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
-    SharedModule
+    SharedModule,
+    MatDialogModule,
+
     // MatOptionModule
   ],
   providers: [

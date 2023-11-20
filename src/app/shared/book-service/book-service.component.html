@@ -1,10 +1,31 @@
 <app-nav></app-nav>
 
-<p>book-service works!</p>
 
-<p>{{data.serviceId}}</p>
-<p>{{data.serviceName}}</p>
-<p>{{data.category}}</p>
-<!-- <p>{{serviceName}}</p> -->
+<div class="service-page">
 
-<button id="rzp-button1" (click)="paymentGateway()" class="btn-cart">Proceed to Payment</button>
+    <div>
+        <img src={{data.image}} alt="">
+    </div>
+
+    <div class="service-details">
+        <div>
+
+        <h1 class="title">{{data.serviceName}}</h1>
+
+        <p class="category">{{data.category}}</p>
+
+        <p class="price">{{data.price}}</p>
+
+        <p class="description">{{data.description}}</p>
+
+        <button id="rzp-button1" (click)="paymentGateway()" class="btn-cart">
+            Proceed to Payment
+        </button>
+
+    </div>
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>

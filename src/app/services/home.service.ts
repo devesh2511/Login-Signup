@@ -3,6 +3,8 @@ import { LoginService } from './login.service';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
 import { CleaningServices } from '../shared/home/CleaningServices';
+import { serviceDetails } from '../shared/dialog1/serviceDetails';
+
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +40,15 @@ export class HomeService{
 
   addBooking(arg: any) {
     return this.httpClient.post("https://localhost:7063/api/Bookings",arg);
+  }
+
+  addService(serviceData: serviceDetails): Observable<any> {
+    const url = 'https://localhost:7063/api/CleaningServices';
+    return this.httpClient.post<serviceDetails>(url, serviceData);
+  }
+
+  deleteService(serviceId : string){
+    return this.httpClient.delete(`https://localhost:7063/api/CleaningServices/${serviceId}`)
   }
 
 }
