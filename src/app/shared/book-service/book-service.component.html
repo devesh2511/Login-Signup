@@ -12,11 +12,11 @@
 
         <h1 class="title">{{data.serviceName}}</h1>
 
-        <p class="category">{{data.category}}</p>
+        <p class="category">Category: {{data.category}}</p>
 
-        <p class="price">{{data.price}}</p>
+        <p class="price">Get this service at just ₹ <b>{{data.price}}</b></p>
 
-        <p class="description">{{data.description}}</p>
+        <p class="description">What we do: {{data.description}}</p>
 
         <button id="rzp-button1" (click)="paymentGateway()" class="btn-cart">
             Proceed to Payment
