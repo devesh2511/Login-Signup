@@ -10,7 +10,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Dialog2Component } from './dialog2/dialog2.component';
-
+import { Dialog3Component } from './dialog3/dialog3.component';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { Dialog2Component } from './dialog2/dialog2.component';
     FooterComponent,
     Dialog1Component,
     Dialog2Component,
+    Dialog3Component,
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import { Dialog2Component } from './dialog2/dialog2.component';
     AppointmentComponent,
     FooterComponent,
     Dialog1Component,
-    Dialog2Component
+    Dialog2Component,
+    Dialog3Component
   ]
 })
 export class SharedModule { }
