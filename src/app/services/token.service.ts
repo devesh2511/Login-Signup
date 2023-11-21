@@ -31,5 +31,9 @@ export class TokenService {
     localStorage.removeItem('refreshToken')
   }
 
+  // private getPayLoadfromToken(token: string): any{
+  //   return JSON.parse(atob.split('.')[1]);
+  // }
+
 
 }

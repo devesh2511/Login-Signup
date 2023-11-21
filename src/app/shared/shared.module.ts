@@ -11,7 +11,9 @@ import {RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Dialog2Component } from './dialog2/dialog2.component';
 import { Dialog3Component } from './dialog3/dialog3.component';
-
+import { HomeComponent } from './home/home.component';
+import { MatButtonModule, MatCard, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatPaginatorModule, MatSelectModule, MatToolbarModule } from '@angular/material';
+import { BookingsComponent } from './bookings/bookings.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,22 @@ import { Dialog3Component } from './dialog3/dialog3.component';
     Dialog1Component,
     Dialog2Component,
     Dialog3Component,
+    HomeComponent,
+    BookingsComponent
   ],
   imports: [
     CommonModule,
     MatDialogModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatPaginatorModule,
+    MatCardModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   exports: [
     NavComponent,
@@ -37,7 +49,8 @@ import { Dialog3Component } from './dialog3/dialog3.component';
     FooterComponent,
     Dialog1Component,
     Dialog2Component,
-    Dialog3Component
+    Dialog3Component,
+    //HomeComponent
   ]
 })
 export class SharedModule { }

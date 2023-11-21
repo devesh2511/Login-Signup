@@ -60,7 +60,13 @@ export class BookServiceComponent implements OnInit {
         // this.routed.navigateByUrl('/appointment');
         const thisuser = localStorage.getItem("username");
         console.log(thisuser);
-        const arg = { "BookingId": this.bookingId, "username": thisuser, "serviceName": this.data.serviceName, "PaymentId": response.razorpay_payment_id, Price: this.data.price, "Category": this.data.category }
+        const arg = { "BookingId": this.bookingId, 
+        "username": thisuser, 
+        "serviceId":this.data.serviceId,
+        "serviceName": this.data.serviceName, 
+        "PaymentId": response.razorpay_payment_id, 
+        Price: this.data.price, 
+        "Category": this.data.category }
         console.log(arg);
         this.service.addBooking(arg).subscribe((data: any) => {
           console.log(this.data);

@@ -29,7 +29,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent,
+    // HomeComponent,
     
     // NavComponent,
     //FooterComponent,

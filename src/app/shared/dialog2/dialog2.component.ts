@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from '../../services/home.service';
 import { serviceDetails } from '../dialog1/serviceDetails';
 import { Observable } from 'rxjs';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dialog1',
@@ -22,7 +23,8 @@ export class Dialog2Component implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private service: HomeService
+    private service: HomeService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,6 +38,7 @@ export class Dialog2Component implements OnInit {
     const serviceId = this.deleteServiceForm.get('serviceId').value;
     this.service.deleteService(serviceId).subscribe((response)=>{
       alert("Cleaning Service Deleted");
+      this.router.navigate(['/'])
     
     })
 

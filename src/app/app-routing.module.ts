@@ -9,6 +9,7 @@ import { AdminComponent } from './shared/admin/admin.component';
 import { Dialog1Component } from './shared/dialog1/dialog1.component';
 import { Dialog2Component } from './shared/dialog2/dialog2.component';
 import { Dialog3Component } from './shared/dialog3/dialog3.component';
+import { BookingsComponent } from './shared/bookings/bookings.component'
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path: 'dialog1', component:Dialog1Component},
   {path: 'dialog2', component:Dialog2Component},
   {path: 'dialog3', component:Dialog3Component},
-
+  {path: 'bookings', component:BookingsComponent},
 
 ];
 
@@ -28,4 +29,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}

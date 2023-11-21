@@ -1,8 +1,8 @@
 <div class="login-body">
     <div class="screen">
         <div class="screen__content">
-            <h1 class="h3 mb-3 fw-normal">Register</h1>
-            
+            <h1 class="h3 mb-3 fw-normal">Delete Service</h1>
+
             <form class="login" [formGroup]='deleteServiceForm' (submit)="deleteService()">
                 <div class="login__field">
                     <i class="login__icon fas fa-user"></i>
@@ -11,7 +11,7 @@
                 </div>
 
                 <button class="button login__submit" type="submit" [disabled]="!deleteServiceForm.valid">
-                    <span class="button__text">Add</span>
+                    <span class="button__text">Delete</span>
                     <i class="button__icon fas fa-chevron-right"></i>
                 </button>
                 <div class="social-login">

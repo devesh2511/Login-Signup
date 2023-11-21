@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeService } from '../../services/home.service';
 import { serviceDetails } from './serviceDetails';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dialog1',
@@ -19,7 +20,7 @@ export class Dialog1Component implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-   
+   private router: Router,
     private service: HomeService
   ) { }
 
@@ -40,7 +41,9 @@ export class Dialog1Component implements OnInit {
       next: (res: serviceDetails) =>{
         console.log(res);
         alert("New Cleaning Service Added")
+        this.router.navigate(['/'])
         this.dialogRef.close();
+        
       },
       error:(err: any) =>{
         console.log(err);

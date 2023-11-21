@@ -6,6 +6,7 @@ import { CleaningServices } from '../shared/home/CleaningServices';
 import { serviceDetails } from '../shared/dialog1/serviceDetails';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -49,6 +50,16 @@ export class HomeService{
 
   deleteService(serviceId : string){
     return this.httpClient.delete(`https://localhost:7063/api/CleaningServices/${serviceId}`)
+  }
+
+  updateService(serviceData: serviceDetails){
+    const url = `https://localhost:7063/api/CleaningServices/${serviceData.serviceId}`;
+
+    return this.httpClient.put(url, serviceData)
+  }
+
+  getBookingbyUsername(username : string){
+    return this.httpClient.get(`https://localhost:7063/api/Bookings/getbyuser/${username}`)
   }
 
 }
