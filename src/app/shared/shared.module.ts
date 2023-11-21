@@ -14,24 +14,19 @@ import { Dialog3Component } from './dialog3/dialog3.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule, MatCard, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatPaginatorModule, MatSelectModule, MatToolbarModule } from '@angular/material';
 import { BookingsComponent } from './bookings/bookings.component';
+import {MatTableModule} from '@angular/material/table';
+import {Component} from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @NgModule({
   declarations: [
-    NavComponent,
-    BookServiceComponent,
-    AppointmentComponent,
-    AdminComponent,
-    FooterComponent,
-    Dialog1Component,
-    Dialog2Component,
-    Dialog3Component,
-    HomeComponent,
-    BookingsComponent
+    
   ],
   imports: [
     CommonModule,
     MatDialogModule,
     RouterModule,
+    FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatPaginatorModule,
@@ -41,6 +36,9 @@ import { BookingsComponent } from './bookings/bookings.component';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTableModule,
+    Component,
+
   ],
   exports: [
     NavComponent,
@@ -50,6 +48,7 @@ import { BookingsComponent } from './bookings/bookings.component';
     Dialog1Component,
     Dialog2Component,
     Dialog3Component,
+    MatTableModule
     //HomeComponent
   ]
 })

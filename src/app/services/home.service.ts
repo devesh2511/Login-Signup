@@ -4,6 +4,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { map, Observable, tap } from 'rxjs';
 import { CleaningServices } from '../shared/home/CleaningServices';
 import { serviceDetails } from '../shared/dialog1/serviceDetails';
+import { Bookings } from '../shared/bookings/Bookings';
 
 
 
@@ -60,6 +61,14 @@ export class HomeService{
 
   getBookingbyUsername(username : string){
     return this.httpClient.get(`https://localhost:7063/api/Bookings/getbyuser/${username}`)
+  }
+
+  getBookingbyBookingId(BookingId : string){
+    return this.httpClient.get(`https://localhost:7063/api/Bookings/${BookingId}`)
+  }
+
+  addReviews(arg1: any) {
+    return this.httpClient.post("https://localhost:7063/api/Review",arg1);
   }
 
 }

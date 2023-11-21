@@ -16,12 +16,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatIconModule, MatInputModule, MatTableModule } from '@angular/material';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { BookServiceComponent } from './shared/book-service/book-service.component';
 import { AppointmentComponent } from './shared/appointment/appointment.component';
 import { SharedModule } from './shared/shared.module';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { AdminComponent } from './shared/admin/admin.component';
+import { BookingsComponent } from './shared/bookings/bookings.component';
+import { Dialog1Component } from './shared/dialog1/dialog1.component';
+import { Dialog2Component } from './shared/dialog2/dialog2.component';
+import { Dialog3Component } from './shared/dialog3/dialog3.component';
 
 
 @NgModule({
@@ -29,6 +34,16 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     RegisterComponent,
     LoginComponent,
+    NavComponent,
+    BookServiceComponent,
+    AppointmentComponent,
+    AdminComponent,
+    FooterComponent,
+    Dialog1Component,
+    Dialog2Component,
+    Dialog3Component,
+    HomeComponent,
+    BookingsComponent
     // HomeComponent,
     
     // NavComponent,
@@ -50,9 +65,8 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
-    SharedModule,
     MatDialogModule,
-
+    MatTableModule
     // MatOptionModule
   ],
   providers: [

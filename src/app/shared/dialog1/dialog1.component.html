@@ -2,7 +2,7 @@
     <div class="screen">
         <div class="screen__content">
             <h1 class="h3 mb-3 fw-normal">New Service</h1>
-            <form class="login" [formGroup]='newserviceForm' (submit)="addnewservice()">
+            <form class="login" [formGroup]='newserviceForm' (ngSubmit)="addnewservice()">
                 <div class="login__field">
                     <i class="login__icon fas fa-user"></i>
                     <input type="text" class="login__input" id="floatingInput" formControlName="serviceId"

@@ -20,7 +20,7 @@ export class Dialog1Component implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-   private router: Router,
+    private router: Router,
     private service: HomeService
   ) { }
 
@@ -38,14 +38,14 @@ export class Dialog1Component implements OnInit {
   addnewservice(): void {
     const serviceData: serviceDetails = this.newserviceForm.value;
     this.service.addService(serviceData).subscribe({
-      next: (res: serviceDetails) =>{
+      next: (res: serviceDetails) => {
         console.log(res);
         alert("New Cleaning Service Added")
         this.router.navigate(['/'])
         this.dialogRef.close();
-        
+
       },
-      error:(err: any) =>{
+      error: (err: any) => {
         console.log(err);
       }
     });

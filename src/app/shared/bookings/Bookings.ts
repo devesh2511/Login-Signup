@@ -6,6 +6,4 @@ export interface Bookings {
     price: number;
     category: string;
     serviceId: string;
-
-  }
-    
+}
